@@ -1,47 +1,49 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
-/* Font Awesome CSS */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   border: 1px solid #797676;
-  /* Add border to the body */
   border-radius: 20px;
-  margin: 10px;
-  /* Add margin to create space around the border */ }
+  margin: 10px; }
 
 .container {
   display: flex;
   height: 100vh;
   border-radius: 20px;
-  /* Add border radius for a curved appearance */
   overflow: hidden;
-  /* Hide any content that overflows the curved border */
-  background-color: #fff;
-  /* Set the background color for the container */ }
+  background-color: #fff; }
 
 .main-container {
   display: flex;
   flex: 1;
-  /* This makes the main container take up the remaining space */
   background-color: #fff; }
 
 .sidebar-head {
   color: #0c0c0c; }
 
-#sidebar {
+.sidebar {
   width: 200px;
-  background: #aab4c8;
+  background: #f2f2f2;
   color: #fff;
   padding: 20px; }
-  #sidebar a {
+  .sidebar a {
     display: block;
     padding: 10px 20px 0 20px;
     line-height: 50px;
     color: #0c0c0c;
     text-decoration: none; }
+
+@media only screen and (max-width: 890px) {
+  .sidebar {
+    width: 150px; }
+  .add-button {
+    font-size: 1.2em;
+    /* Adjust font sizes as needed */ }
+  .main-heading {
+    font-size: 1em; } }
 
 #not-bold {
   font-weight: lighter; }
@@ -91,7 +93,7 @@ nav {
           height: 5px;
           content: "";
           position: absolute;
-          background-color: #0057f8;
+          background-color: #7729dd;
           width: 0%;
           bottom: 0px; }
         nav ul li a:hover::before {
@@ -125,7 +127,7 @@ nav {
   height: 70px;
   width: 70px; }
 
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 768px) {
   .nav-mobile {
     display: block; }
   nav {
@@ -158,7 +160,7 @@ nav {
     border-radius: 1px;
     height: 5px;
     width: 35px;
-    background: #0057f8;
+    background: #7729dd;
     position: absolute;
     display: block;
     content: "";
@@ -176,7 +178,7 @@ nav {
     #nav-toggle.active span:after {
       transform: rotate(-45deg); }
 
-@media screen and (min-width: 799px) {
+@media screen and (min-width: 1024px) {
   .nav-list {
     display: block !important; } }
 
@@ -192,8 +194,8 @@ nav {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px; }
+  width: 30px;
+  height: 20px; }
 
 .switch input {
   display: none; }
@@ -213,8 +215,8 @@ nav {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 12px;
+  width: 10px;
   left: 4px;
   bottom: 4px;
   background-color: #fff;
@@ -223,12 +225,12 @@ nav {
   border-radius: 50%; }
 
 input:checked + .slider {
-  background-color: #2196f3; }
+  background-color: #7729dd; }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px); }
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px); }
 
 .filter-label {
   margin-left: 10px; }
@@ -242,7 +244,7 @@ input:checked + .slider:before {
   cursor: pointer; }
   .filter-button:hover,
   .sort-button:hover {
-    background: #0057f8; }
+    background: #7729dd; }
   .filter-button i,
   .sort-button i {
     margin-right: 5px; }
@@ -254,3 +256,96 @@ input:checked + .slider:before {
 .sort-button i::before {
   content: "\f0dc";
   /* Font Awesome sort icon */ }
+
+.right-buttons {
+  display: flex;
+  justify-content: flex-end;
+  /* Align the buttons to the right */
+  align-items: center;
+  margin-top: 20px; }
+
+#download-btn {
+  padding: 10px 20px;
+  background: #fff;
+  color: #0c0c0c;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s; }
+
+#add-btn {
+  padding: 10px 20px;
+  background: #7729dd;
+  color: #fff;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background-color 0.3s; }
+
+.company-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px; }
+
+.company-table th,
+.company-table td {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: left; }
+
+.company-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  border-left: none;
+  border-right: none; }
+
+.company-table .checkbox-label {
+  display: flex;
+  align-items: center; }
+
+.company-table .checkbox-label input {
+  margin-right: 8px; }
+
+.company-table td {
+  border-left: none;
+  border-right: none; }
+
+.company-table .pre-revenue button {
+  border: 1px solid #1d1dbe;
+  border-radius: 10px;
+  color: #1d1dbe;
+  padding: 7px; }
+
+.company-table .series-A button {
+  border: 1px solid #7729dd;
+  border-radius: 10px;
+  color: #7729dd;
+  padding: 7px; }
+
+.company-table .seed-funding button {
+  border: 1px solid #1c8dd2;
+  border-radius: 10px;
+  color: #1c8dd2;
+  padding: 7px; }
+
+/* Responsive Styles */
+@media only screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column; }
+  .main-container {
+    flex: none;
+    width: 100%; }
+  .sidebar {
+    width: 100%; }
+  .nav-container {
+    max-width: 100%; }
+  .filter-button,
+  .sort-button {
+    padding: 5px 10px;
+    font-size: 80%; }
+  .company-table th,
+  .company-table td {
+    padding: 10px; }
+  .company-table .checkbox-label input {
+    margin-right: 4px; } }
