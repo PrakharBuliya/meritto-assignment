@@ -1,4 +1,5 @@
 $content-width: 1000px;
+$breakpoint-mobile: 886px;
 $nav-height: 70px;
 $nav-background: #fff;
 $nav-font-color: #0c0c0c;
@@ -32,6 +33,8 @@ body {
 
 .sidebar-head {
   color: $nav-font-color;
+  display: flex;
+  align-items: center;
 }
 .sidebar {
   width: 200px;
@@ -47,39 +50,26 @@ body {
   }
 }
 
-/* Hide the sidebar by default on mobile screens */
-@media only screen and (max-width: 890px) {
+@media only screen and (max-width: $breakpoint-mobile) {
   .sidebar {
     width: 0;
+    padding: 0;
     overflow: hidden;
+    transition: 0.5s; /* Add a smooth transition effect */
   }
-}
 
-/* Show the sidebar when it has the "active" class */
-.sidebar.active {
-  width: 200px;
+  .sidebar.active {
+    width: 200px; /* Set the width when active */
+    padding: 20px;
+  }
 }
 
 #nav-toggle {
   position: absolute;
-  left: 18px;
-  top: 22px;
+  left: 6px;
+  top: 30px;
   cursor: pointer;
-  padding: 10px 35px 16px 0px;
-}
-
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background: #7729dd;
-  position: absolute;
-  display: block;
-  content: "";
-  transition: all 300ms ease-in-out;
+  padding: 10px 5px 16px 10px;
 }
 
 #nav-toggle span:before {

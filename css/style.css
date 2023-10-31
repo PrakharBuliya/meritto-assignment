@@ -22,7 +22,9 @@ body {
   background-color: #fff; }
 
 .sidebar-head {
-  color: #0c0c0c; }
+  color: #0c0c0c;
+  display: flex;
+  align-items: center; }
 
 .sidebar {
   width: 200px;
@@ -36,35 +38,24 @@ body {
     color: #0c0c0c;
     text-decoration: none; }
 
-/* Hide the sidebar by default on mobile screens */
-@media only screen and (max-width: 890px) {
+@media only screen and (max-width: 886px) {
   .sidebar {
     width: 0;
-    overflow: hidden; } }
-
-/* Show the sidebar when it has the "active" class */
-.sidebar.active {
-  width: 200px; }
+    padding: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    /* Add a smooth transition effect */ }
+  .sidebar.active {
+    width: 200px;
+    /* Set the width when active */
+    padding: 20px; } }
 
 #nav-toggle {
   position: absolute;
-  left: 18px;
-  top: 22px;
+  left: 6px;
+  top: 30px;
   cursor: pointer;
-  padding: 10px 35px 16px 0px; }
-
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background: #7729dd;
-  position: absolute;
-  display: block;
-  content: "";
-  transition: all 300ms ease-in-out; }
+  padding: 10px 5px 16px 10px; }
 
 #nav-toggle span:before {
   top: -10px; }
