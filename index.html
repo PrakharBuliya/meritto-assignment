@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Example</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-xxx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-container">
+        <div id="sidebar">
+          <h2 class="sidebar-head">ConnectHub</h2>
+          <a href="#">Home</a>
+          <a href="#">Companies</a>
+          <a href="#">People</a>
+          <a href="#">Charts</a>
+        </div>
+        <div id="content">
+          <h1>Companies <span id="not-bold">1,260</span></h1>
+          <section class="navigation">
+            <div class="nav-container">
+              <nav>
+                <div class="nav-mobile">
+                  <a id="nav-toggle" href="#!"><span></span></a>
+                </div>
+                <ul class="nav-list">
+                  <li><a href="#!">General View</a></li>
+                  <li><a href="#!">Bootstraped Companies</a></li>
+                  <li><a href="#!">Pre-Seed Stage</a></li>
+                  <li><a href="#!" id="bold">+</a></li>
+                </ul>
+              </nav>
+            </div>
+          </section>
+
+          <div class="buttons">
+            <button class="filter-button">
+              <i class="fas fa-filter"></i> Filter
+            </button>
+            <button class="sort-button">
+              <i class="fas fa-sort-amount-up"></i> Sort
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
