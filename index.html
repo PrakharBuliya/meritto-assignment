@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sidebar Example</title>
+    <title>Assignment</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -27,9 +27,9 @@
           <section class="navigation">
             <div class="nav-container">
               <nav>
-                <div class="nav-mobile">
+                <!-- <div class="nav-mobile">
                   <a id="nav-toggle" href="#!"><span></span></a>
-                </div>
+                </div> -->
                 <ul class="nav-list">
                   <li><a href="#!">General View</a></li>
                   <li><a href="#!">Bootstraped Companies</a></li>
@@ -41,12 +41,22 @@
           </section>
 
           <div class="buttons">
-            <button class="filter-button">
-              <i class="fas fa-filter"></i> Filter
-            </button>
-            <button class="sort-button">
-              <i class="fas fa-sort-amount-up"></i> Sort
-            </button>
+            <div class="left-buttons">
+              <button class="filter-button">
+                <i class="fas fa-filter"></i> Filter
+              </button>
+              <button class="sort-button">
+                <i class="fas fa-sort-amount-up"></i> Sort
+              </button>
+              <label class="switch">
+                <input type="checkbox" id="funded-companies" />
+                <span class="slider"></span>
+              </label>
+              <span class="filter-label">Funded Companies</span>
+            </div>
+            <div class="right-buttons">
+              <button>Download CSV</button>
+            </div>
           </div>
         </div>
       </div>

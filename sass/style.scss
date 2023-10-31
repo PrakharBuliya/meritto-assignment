@@ -12,12 +12,15 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
+  border: 1px solid #797676; /* Add border to the body */
+  border-radius: 20px;
+  margin: 10px; /* Add margin to create space around the border */
 }
 
 .container {
   display: flex;
   height: 100vh;
+  // width: 100vh;
   border-radius: 20px; /* Add border radius for a curved appearance */
   overflow: hidden; /* Hide any content that overflows the curved border */
   background-color: #fff; /* Set the background color for the container */
@@ -27,7 +30,7 @@ body {
   display: flex;
   flex: 1; /* This makes the main container take up the remaining space */
   background-color: #fff;
-  padding: 20px;
+  // padding: 20px;
 }
 
 .sidebar-head {
@@ -67,6 +70,7 @@ body {
 }
 
 #content {
+  flex: 1;
   padding: 20px;
 }
 
@@ -76,6 +80,7 @@ body {
 }
 
 .nav-container {
+  float: left;
   max-width: $content-width;
   margin: 0 auto;
 }
@@ -124,6 +129,11 @@ nav {
       }
     }
   }
+}
+.nav-line {
+  width: 100%;
+  height: 1px;
+  background-color: #0c0c0c;
 }
 
 .nav-dropdown {
@@ -221,30 +231,89 @@ nav {
   }
 }
 
+/* Filter and Sort buttons */
 .buttons {
   display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically */
   margin-top: 20px;
-  button {
-    padding: 10px 20px;
-    background: $nav-background;
-    color: $nav-font-color;
-    border: none;
-    cursor: pointer;
-    &:hover {
-      background: $link-hover-color;
-    }
-    i {
-      margin-right: 5px;
-    }
+}
+
+/* Sliding Checkbox Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.filter-label {
+  margin-left: 10px;
+}
+
+.filter-button,
+.sort-button {
+  padding: 10px 20px;
+  background: $nav-background;
+  color: $nav-font-color;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background: $link-hover-color;
+  }
+  i {
+    margin-right: 5px;
   }
 }
+
 .filter-button {
   i::before {
-    content: "\f0b0"; // Font Awesome filter icon
+    content: "\f0b0"; /* Font Awesome filter icon */
   }
 }
+
 .sort-button {
   i::before {
-    content: "\f0dc"; // Font Awesome sort icon
+    content: "\f0dc"; /* Font Awesome sort icon */
   }
 }
