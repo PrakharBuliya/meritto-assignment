@@ -283,6 +283,16 @@ input:checked + .slider:before {
     font-size: 24px; }
   p {
     font-size: 14px; }
+  .sidebar {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    /* Add a smooth transition effect */ }
+  .sidebar.active {
+    width: 200px;
+    /* Set the width when active */
+    padding: 20px; }
   .company-table th,
   .company-table td {
     padding: 10px 5px;
