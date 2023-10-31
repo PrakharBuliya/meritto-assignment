@@ -15,6 +15,7 @@ body {
   border: 1px solid #797676;
   border-radius: 20px;
   margin: 10px;
+  font-size: 16px;
 }
 
 .container {
@@ -47,20 +48,6 @@ body {
     line-height: 50px;
     color: $nav-font-color;
     text-decoration: none;
-  }
-}
-
-@media only screen and (max-width: $breakpoint-mobile) {
-  .sidebar {
-    width: 0;
-    padding: 0;
-    overflow: hidden;
-    transition: 0.5s; /* Add a smooth transition effect */
-  }
-
-  .sidebar.active {
-    width: 200px; /* Set the width when active */
-    padding: 20px;
   }
 }
 
@@ -344,4 +331,33 @@ input:checked + .slider:before {
   border-radius: 10px;
   color: #1c8dd2;
   padding: 7px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 8px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .company-table th,
+  .company-table td {
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+
+  .table-container {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
 }
